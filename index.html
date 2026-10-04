@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Bridgeman All Services | Cleaning, Maintenance & Security</title>
+  <meta name="description" content="Bridgeman All Services brings cleaning, property maintenance and security together. Discuss a service plan for your property or business.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%230b2330'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-family='Arial' font-weight='bold' font-size='28' fill='%23c9f36b'%3EB%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --navy: #0b2330;
+      --lime: #c9f36b;
+      --paper: #f5f7f8;
+      --ink: #142d39;
+      --muted: #526671;
+      --line: #dbe2e6;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: white;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; }
+    button, a, input, select, textarea { outline-offset: 5px; }
+
+    .wrap {
+      width: min(1160px, calc(100% - 48px));
+      margin: auto;
+    }
+
+    header {
+      background: var(--navy);
+      color: white;
+      border-bottom: 1px solid #ffffff24;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.2;
+    }
+
+    .mark {
+      background: var(--lime);
+      color: var(--navy);
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 28px;
+      border-radius: 8px;
+    }
+
+    .brand strong { display: block; font-size: 18px; }
+    .brand small {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .links { display: flex; gap: 28px; align-items: center; }
+    .links a { text-decoration: none; font-size: 14px; }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 14px 23px;
+      border-radius: 5px;
+      background: var(--lime);
+      color: var(--navy);
+      font-weight: 700;
+      text-decoration: none;
+      border: 0;
+      cursor: pointer;
+      min-height: 48px;
+    }
+
+    .btn:hover { background: #b7e45a; }
+
+    .btn.outline {
+      background: transparent;
+      border: 1px solid #ffffff60;
+      color: white;
+    }
+
+    .menu {
+      display: none;
+      background: transparent;
+      border: 1px solid #ffffff60;
+      color: white;
+      border-radius: 5px;
+      padding: 8px 12px;
+    }
+
+    .hero {
+      background: var(--navy);
+      color: white;
+      padding: 85px 0 70px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #a6bdc8;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6vw, 76px);
+      letter-spacing: -3px;
+      line-height: 1.06;
+      margin: 23px 0;
+    }
+
+    .hero h1 span { color: var(--lime); }
+
+    .hero p {
+      font-size: 18px;
+      color: #c1d0d7;
+      max-width: 530px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .service-panel {
+      border: 1px solid #ffffff30;
+      border-radius: 10px;
+      background: #ffffff05;
+      padding: 30px;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #ffffff25;
+      font-size: 14px;
+      color: #b9ccd5;
+    }
+
+    .panel-head b { font-size: 20px; color: var(--lime); }
+
+    .panel-row {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid #ffffff20;
+    }
+
+    .panel-row:last-child { border: 0; padding-bottom: 0; }
+    .num { font-size: 14px; color: var(--lime); }
+    .panel-row h2 { font-size: 23px; margin: 0; }
+    .panel-row p { font-size: 14px; margin: 4px 0 0; }
+
+    .strip { background: var(--lime); padding: 20px 0; }
+
+    .strip .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .section { padding: 85px 0; }
+
+    .heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 35px;
+    }
+
+    .kicker {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .heading h2, .about h2, .contact h2 {
+      font-size: clamp(32px, 4vw, 45px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin: 13px 0 0;
+    }
+
+    .heading p {
+      max-width: 360px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .card .tag {
+      background: var(--paper);
+      padding: 5px 10px;
+      font-size: 13px;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+
+    .card h3 { font-size: 25px; margin: 24px 0 10px; }
+    .card p { color: var(--muted); margin: 0; }
+
+    .card ul {
+      padding-left: 19px;
+      color: var(--muted);
+      font-size: 15px;
+      margin: 20px 0 30px;
+    }
+
+    .card li { padding: 4px 0; }
+
+    .card a {
+      font-weight: 700;
+      font-size: 14px;
+      text-underline-offset: 5px;
+      margin-top: auto;
+    }
+
+    .about { background: var(--paper); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .about p { color: var(--muted); font-size: 17px; }
+    .steps { margin-top: 0; }
+
+    .step {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 15px;
+      border-bottom: 1px solid var(--line);
+      padding: 22px 0;
+    }
+
+    .step:first-child { padding-top: 0; }
+
+    .step b {
+      font-size: 14px;
+      background: var(--navy);
+      color: var(--lime);
+      height: 34px;
+      width: 34px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+    }
+
+    .step h3 { margin: 0; font-size: 18px; }
+    .step p { font-size: 15px; margin: 5px 0 0; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 75px;
+    }
+
+    .contact p { color: var(--muted); }
+
+    .contact-note {
+      margin-top: 28px;
+      border-left: 3px solid var(--lime);
+      padding-left: 18px;
+    }
+
+    .contact-note strong { display: block; }
+    .contact-note p { font-size: 15px; margin-top: 5px; }
+
+    form {
+      padding: 30px;
+      background: var(--paper);
+      border-radius: 8px;
+      border: 1px solid var(--line);
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 18px;
+    }
+
+    label { font-size: 14px; font-weight: 700; }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #b9c6cd;
+      background: white;
+      padding: 12px;
+      border-radius: 4px;
+      color: var(--ink);
+      min-height: 48px;
+    }
+
+    textarea { resize: vertical; min-height: 115px; }
+    .form-note { font-size: 13px !important; margin: 14px 0 0; }
+    #feedback { font-size: 14px; margin: 14px 0 0; color: var(--ink); }
+
+    footer { background: var(--navy); color: white; padding: 35px 0; }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .footer p { color: #b9ccd5; font-size: 13px; margin: 0; }
+    .footer a { font-size: 14px; color: #b9ccd5; }
+
+    @media (max-width: 850px) {
+      .hero-grid, .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero { padding: 55px 0; }
+      .service-panel { padding: 24px; }
+      .cards { grid-template-columns: 1fr; }
+      .heading { align-items: start; flex-direction: column; gap: 20px; }
+      .section { padding: 60px 0; }
+      .strip .wrap { flex-wrap: wrap; }
+      .links { gap: 15px; }
+      .links .btn { display: none; }
+      .hero h1 { letter-spacing: -2px; }
+      .footer { align-items: start; flex-direction: column; }
+    }
+
+    @media (max-width: 600px) {
+      .wrap { width: calc(100% - 32px); }
+      .nav { height: 76px; }
+      .brand strong { font-size: 16px; }
+      .brand small { font-size: 10px; }
+      .menu { display: block; }
+
+      .links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 76px;
+        background: var(--navy);
+        padding: 24px;
+        flex-direction: column;
+        align-items: start;
+        border-bottom: 1px solid #ffffff30;
+      }
+
+      .links.open { display: flex; }
+      .fields { grid-template-columns: 1fr; gap: 0; }
+      .hero h1 { font-size: 48px; }
+      .strip .wrap { gap: 10px; flex-direction: column; }
+      .hero p { font-size: 17px; }
+      form { padding: 22px; }
+      .card { padding: 25px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Bridgeman All Services home">
+        <span class="mark">B</span>
+        <span>
+          <strong>BRIDGEMAN</strong>
+          <small>All Services</small>
+        </span>
+      </a>
+
+      <button class="menu" aria-expanded="false" aria-controls="navigation">
+        Menu
+      </button>
+
+      <nav id="navigation" class="links" aria-label="Main navigation">
+        <a href="#services">Our services</a>
+        <a href="#about">How we work</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#contact">Request a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Bridgeman All Services · BAS</div>
+          <h1>Your property.<br>Our priority.<br><span>Every day.</span></h1>
+          <p>
+            Cleaning, maintenance and security brought together.
+            Practical support to keep your premises clean, cared for and protected.
+          </p>
+          <div class="actions">
+            <a class="btn" href="#contact">Request a quote</a>
+            <a class="btn outline" href="#services">Explore our services</a>
+          </div>
+        </div>
+
+        <div class="service-panel">
+          <div class="panel-head">
+            <span>ONE CONTACT. COMPLETE SUPPORT.</span>
+            <b>BAS</b>
+          </div>
+
+          <div class="panel-row">
+            <span class="num">01</span>
+            <div>
+              <h2>Cleaning</h2>
+              <p>A clean space. A better first impression.</p>
+            </div>
+          </div>
+
+          <div class="panel-row">
+            <span class="num">02</span>
+            <div>
+              <h2>Maintenance</h2>
+              <p>Care for the details that keep things running.</p>
+            </div>
+          </div>
+
+          <div class="panel-row">
+            <span class="num">03</span>
+            <div>
+              <h2>Security</h2>
+              <p>Support for your people and premises.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="wrap">
+        <span>Cleaning &amp; property care</span>
+        <span>One-off &amp; ongoing requirements</span>
+        <span>A service plan built around you</span>
+      </div>
+    </div>
+
+    <section id="services" class="section">
+      <div class="wrap">
+        <div class="heading">
+          <div>
+            <div class="kicker">Our services</div>
+            <h2>Three services.<br>One straightforward approach.</h2>
+          </div>
+          <p>
+            Tell us what your premises need. We’ll discuss the scope,
+            timing and the right combination of services.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <span class="tag">01 / Cleaning</span>
+            <h3>Spaces that feel cared for.</h3>
+            <p>
+              Cleaning support shaped around how your property is used
+              and when you need us.
+            </p>
+            <ul>
+              <li>Office &amp; commercial cleaning</li>
+              <li>Deep cleans &amp; end-of-tenancy cleans</li>
+              <li>Regular cleaning schedules</li>
+              <li>Communal areas &amp; shared spaces</li>
+            </ul>
+            <a href="#contact" data-service="Cleaning">Discuss cleaning</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">02 / Maintenance</span>
+            <h3>Keep your property in order.</h3>
+            <p>
+              Practical help with everyday upkeep and the small jobs
+              that make a big difference.
+            </p>
+            <ul>
+              <li>General property maintenance</li>
+              <li>Minor repairs &amp; handyman tasks</li>
+              <li>Planned upkeep &amp; inspections</li>
+              <li>Grounds &amp; exterior care</li>
+            </ul>
+            <a href="#contact" data-service="Maintenance">
+              Discuss maintenance
+            </a>
+          </article>
+
+          <article class="card">
+            <span class="tag">03 / Security</span>
+            <h3>Care beyond the working day.</h3>
+            <p>
+              Discuss security requirements for your premises, people
+              or event, with the service scope agreed in advance.
+            </p>
+            <ul>
+              <li>Premises &amp; site security</li>
+              <li>Access &amp; visitor management</li>
+              <li>Event security requirements</li>
+              <li>Property checks &amp; monitoring</li>
+            </ul>
+            <a href="#contact" data-service="Security">Discuss security</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section about">
+      <div class="wrap about-grid">
+        <div>
+          <div class="kicker">The Bridgeman approach</div>
+          <h2>Less coordination.<br>More peace of mind.</h2>
+          <p>
+            Managing a property means keeping track of a lot of moving
+            parts. Bridgeman All Services brings your cleaning,
+            maintenance and security requirements into one conversation.
+          </p>
+          <p>
+            Whether you need help with a single job or want to discuss
+            ongoing support, we start with your priorities and agree
+            a clear plan.
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <b>1</b>
+            <div>
+              <h3>Tell us what you need</h3>
+              <p>
+                Share your location, property type and the services
+                you’re looking for.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <b>2</b>
+            <div>
+              <h3>Agree the details</h3>
+              <p>
+                We discuss the work, frequency and access arrangements
+                before preparing a quote.
+              </p>
+            </div>
+          </div>
+
+          <div class="step">
+            <b>3</b>
+            <div>
+              <h3>Put your plan in place</h3>
+              <p>
+                Once the scope is agreed, we arrange the next steps
+                around your property.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="wrap contact-grid">
+        <div>
+          <div class="kicker">Let’s talk</div>
+          <h2>What can we<br>take care of?</h2>
+          <p>
+            Tell us a little about your requirements and we can discuss
+            a quote for your property or business.
+          </p>
+          <div class="contact-note">
+            <strong>A useful starting point</strong>
+            <p>
+              Include your location, the size of your premises, and
+              whether you need a one-off service or ongoing support.
+            </p>
+          </div>
+        </div>
+
+        <form id="quote-form">
+          <div class="fields">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                maxlength="120"
+              >
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="180"
+              >
+            </div>
+          </div>
+
+          <div class="fields">
+            <div class="field">
+              <label for="phone">Phone number (optional)</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                maxlength="50"
+              >
+            </div>
+            <div class="field">
+              <label for="service">Service required</label>
+              <select id="service" name="service">
+                <option>Cleaning</option>
+                <option>Maintenance</option>
+                <option>Security</option>
+                <option>Multiple services</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="location">Property location</label>
+            <input
+              id="location"
+              name="location"
+              autocomplete="address-level2"
+              required
+              maxlength="200"
+            >
+          </div>
+
+          <div class="field">
+            <label for="message">Tell us what you need</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              maxlength="3000"
+              placeholder="Property type, job details and preferred timing"
+            ></textarea>
+          </div>
+
+          <button class="btn" type="submit">Prepare email enquiry</button>
+          <p class="form-note">
+            This opens an enquiry in your email app.
+            Review it and press send there.
+          </p>
+          <p id="feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer">
+      <a class="brand" href="#home">
+        <span class="mark">B</span>
+        <span>
+          <strong>BRIDGEMAN</strong>
+          <small>All Services</small>
+        </span>
+      </a>
+      <p>
+        © <span id="year"></span> Bridgeman All Services.
+        All rights reserved.
+      </p>
+      <a href="#contact">Discuss your requirements</a>
+    </div>
+  </footer>
+
+  <script>
+    // Add your real business email below before publishing.
+    const BUSINESS_EMAIL = '';
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menu = document.querySelector('.menu');
+    const nav = document.getElementById('navigation');
+
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      menu.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('open', open);
+    });
+
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.setAttribute('aria-expanded', 'false');
+        nav.classList.remove('open');
+      });
+    });
+
+    document.querySelectorAll('[data-service]').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('service').value = a.dataset.service;
+      });
+    });
+
+    document.getElementById('quote-form').addEventListener('submit', event => {
+      event.preventDefault();
+
+      const feedback = document.getElementById('feedback');
+
+      if (!BUSINESS_EMAIL) {
+        feedback.textContent =
+          'Email enquiries are not connected yet. Please check back once the business contact details are available.';
+        return;
+      }
+
+      const data = new FormData(event.currentTarget);
+
+      const body =
+        `Name: ${data.get('name')}\n` +
+        `Email: ${data.get('email')}\n` +
+        `Phone: ${data.get('phone') || 'Not provided'}\n` +
+        `Service: ${data.get('service')}\n` +
+        `Location: ${data.get('location')}\n\n` +
+        `${data.get('message')}`;
+
+      window.location.href =
+        `mailto:${BUSINESS_EMAIL}` +
+        `?subject=${encodeURIComponent('BAS enquiry: ' + data.get('service'))}` +
+        `&body=${encodeURIComponent(body)}`;
+
+      feedback.textContent =
+        'Your email app has been requested. Your enquiry is only sent when you press send in that app.';
+    });
+  </script>
+</body>
+</html>
